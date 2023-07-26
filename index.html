@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="w-75 m-auto m-3">
+        <h2 class="fw-bolder py-3">Product Managment System</h2>
+        <label for="productNameInput">productName:</label>
+        <input type="text" oninput="validationProductName()" class="form-control mb-2 mt-2" id="productNameInput" />
+        <p class="bg-danger text-muted d-none nameRequired">Name required</p>
+        <label for="productPriceInput">productPrice:</label>
+        <input type="number" oninput="validationProductPrice()" class="form-control mb-2 mt-2" id="productPriceInput">
+        <label for="productCategoryInput">productCategory:</label>
+        <input type="text" oninput="validationProductCategory()" class="form-control mb-2 mt-2" id="productCategoryInput">
+        <label for="productDescInput">productDesc:</label>
+        <textarea type="text" oninput="validationProductDes()" class="form-control mb-2 mt-2" id="productDescInput"></textarea>
+        <button id="addBtn" onclick="addProduct()" class="btn btn-outline-success mt-2">AddProduct</button>
+        <button id="updateBtn"  onclick="updateProducts()" class="btn d-none btn-outline-primary mt-2">UpdateProduct</button>
+    </div>
+<div class="w-75 mx-auto p-3">
+    <label for="search">search:</label>
+    <input oninput="searchProduct(this.value)" type="text" placeholder="search By Name" class="form-control">
+</div>
+<div class="w-25 mx-auto mt-4 mb-4">
+    <button onclick="deleteAll()" class="btn btn-outline-danger form-control m-3">deleteAll</button>
+</div>
+<table class="table w-75  m-auto"> 
+    <thead>
+        <th>index</th>
+        <th>P-Name</th>
+        <th>P-Price</th>
+        <th>P-Category</th>
+        <th>P-Desc</th>
+        <th>Update</th>
+        <th>Delete</th>
+        
+    </thead>
+    <tbody id="tableBody">
+
+    </tbody>
+</table>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
